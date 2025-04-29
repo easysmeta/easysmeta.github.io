@@ -1,4 +1,4 @@
-/* Обнуление и базовая стилизация */
+/* Сброс отступов и базовые стили */
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +6,11 @@
 }
 
 html, body {
+  width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
 }
 
-/* Обертка на весь экран */
+/* Фон на весь экран */
 .hero {
   width: 100vw;
   height: 100vh;
@@ -18,69 +18,4 @@ html, body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
-
-/* Заголовок */
-.hero-content h1 {
-  font-size: 5vw;
-  max-width: 90%;
-}
-
-/* Кнопка */
-.btn {
-  margin-top: 20px;
-  padding: 15px 30px;
-  font-size: 1rem;
-  background-color: #4285f4;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #3367d6;
-}
-
-/* Карточки */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  color: black;
-  padding: 15px 20px;
-  border-radius: 10px;
-  min-width: 180px;
-  text-align: center;
-}
-
-/* Адаптив */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 7vw;
-  }
-
-  .btn {
-    font-size: 0.9rem;
-    padding: 12px 20px;
-  }
-
-  .card {
-    min-width: 80%;
-  }
 }
