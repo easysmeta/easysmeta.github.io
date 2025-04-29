@@ -1,127 +1,86 @@
-body, html {
+/* Обнуление и базовая стилизация */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   font-family: Arial, sans-serif;
 }
 
-header {
-  width: 100%;
-  padding: 20px 40px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-
-nav .logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-nav .menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  margin-left: 20px;
-}
-
+/* Обертка на весь экран */
 .hero {
-  position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: url('background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  color: white;
   padding: 20px;
   text-align: center;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background: #4285f4;
   color: white;
+}
+
+/* Заголовок */
+.hero-content h1 {
+  font-size: 5vw;
+  max-width: 90%;
+}
+
+/* Кнопка */
+.btn {
+  margin-top: 20px;
   padding: 15px 30px;
-  text-decoration: none;
-  font-size: 18px;
+  font-size: 1rem;
+  background-color: #4285f4;
+  color: white;
+  border: none;
   border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.popular {
-  margin-top: 50px;
+.btn:hover {
+  background-color: #3367d6;
 }
 
-.popular h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
+/* Карточки */
 .cards {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 20px;
+  color: black;
+  padding: 15px 20px;
   border-radius: 10px;
-  width: 150px;
-  color: #333;
+  min-width: 180px;
   text-align: center;
 }
 
-.review {
-  margin-top: 40px;
-  font-style: italic;
-  color: white;
-}
-
-.review p strong {
-  font-style: normal;
-}
-
-@media (max-width: 600px) {
+/* Адаптив */
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 7vw;
   }
 
   .btn {
-    font-size: 16px;
+    font-size: 0.9rem;
     padding: 12px 20px;
   }
 
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .card {
-    width: 80%;
-    margin-bottom: 15px;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-
-  nav .menu {
-    margin-top: 10px;
+    min-width: 80%;
   }
 }
